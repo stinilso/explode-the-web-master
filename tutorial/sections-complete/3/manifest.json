@@ -1,0 +1,23 @@
+{
+    "name": "Explode the Web!",
+    "description": "Explodes web pages that contain data trackers!",
+    "version": "1.1",
+    "manifest_version": 2,
+    "background": {
+        "scripts": ["assets/libs/hot-reload.js"]
+    },
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "js": [
+            "assets/libs/jquery.min.js",
+            "assets/js/disconnect-tracking-services.js",
+            "assets/js/functions.js",
+            "content.js"
+        ],
+        "css": [
+            "assets/css/styles.css"
+        ],
+        "run_at": "document_end"
+    }]
+
+}

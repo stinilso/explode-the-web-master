@@ -1,0 +1,15 @@
+{
+    "name": "Explode the Web!",
+    "description": "Explodes web pages that contain data trackers!",
+    "version": "1.1",
+    "manifest_version": 2,
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "js": [
+            "assets/libs/jquery.min.js",
+            "content.js"
+        ],
+        "run_at": "document_end"
+    }]
+
+}
